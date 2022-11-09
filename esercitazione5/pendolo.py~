@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy import integrate
+from scipy import constants 
+
+def pendolo(omega,t,l,theta):
+    dtet=omega(t)
+    dom=-constants.g/l*np.sin(theta)
+    return dtetdom
+cond_in[0,0.5,np.pi/4]
