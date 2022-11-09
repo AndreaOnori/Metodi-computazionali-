@@ -1,0 +1,13 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+xx=np.arange(0,100,0.1)
+yy=np.empty(len(xx))
+for i in range(len(xx)):
+    yy[i]=(xx[i]**2)
+
+plt.plot(xx,yy)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show
+ 
