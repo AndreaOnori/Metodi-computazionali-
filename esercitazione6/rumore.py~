@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy import optimize as opt
+from scipy import fft
+
+data1=pd.read_csv('data_sample1.csv')
+data2=pd.read_csv('data_sample2.csv')
+data3=pd.read_csv('data_sample3.csv')
+
+
+print(data1)
+print(data2)
+print(data3)
+
+
