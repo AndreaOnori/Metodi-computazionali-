@@ -1,0 +1,25 @@
+import numpy as np
+
+class Hit:
+    def __init__(self,mod,nsens,t):
+        self.modulo=mod
+        self.sensore=nsens
+        self.tempo=t
+    def __lt__(self,other):
+        return self.tempo < other.tempo
+    def __gt__(self,other):
+        return self.tempo > other.tempo
+    def __eq__(self,other):
+        return self.tempo == other.tempo
+    def __sub__(self,other):
+        return self.tempo - other. tempo
+
+class Event:
+    def __init__(self,nhit,ti,tf,dt,arrhit):
+        self.nhit=nhit
+        self.ti=ti
+        self.tf=tf
+        self.dt=dt
+        self.arrhit=arrhit
+
+

@@ -1,0 +1,46 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt 
+import reco as rc
+
+def imm(mod,sens,time):
+    ril=np.null(:len(mod))
+    for i in range(len(mod)):
+        ril[i]=rc.Hit(mod[i],sens[i],time [i])
+    return ril
+
+data0=pd.read_csv('hit_times_M0.csv')
+data1=pd.read_csv('hit_times_M1.csv')
+data2=pd.read_csv('hit_times_M2.csv')
+data3=pd.read_csv('hit_times_M3.csv')
+
+
+print (data0)
+
+'''plt.hist(data0['hit_time'],bins=50)
+plt.show()
+
+
+diff=np.diff(data0['hit_time'].values)
+pippo=diff>0
+difflog=np.log10(diff[pippo])
+
+plt.hist(difflog,bins=50)
+plt.show()'''
+
+#mod_id  det_id   hit_time
+
+
+ril0=ril(data0[mod_id],data0[det_id],data0[hit_time])
+ril1=ril(data1[mod_id],data1[det_id],data1[hit_time])
+ril2=ril(data2[mod_id],data2[det_id],data2[hit_time])
+ril3=ril(data3[mod_id],data3[det_id],data3[hit_time])
+
+hits=ril0.append(ril1)
+hits=hits.append(ril2)
+hits=hits.append(ril3)
+
+
+hits=hits.sort()
+
+pluto=hits>0
